@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us — Gopal Govind Ornaments</title>
+    <meta name="description"
+        content="Get in touch with Gopal Govind Ornaments for inquiries, custom designs, or to visit our showroom in Ahmedabad.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E💎%3C/text%3E%3C/svg%3E">
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.documentElement.classList.add('dark-theme');
+            } else {
+                document.documentElement.classList.remove('dark-theme');
+            }
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="page-loader">
+        <div class="loader-logo">Gopal Govind <span>Ornaments</span></div>
+        <div class="loader-bar">
+            <div class="loader-progress"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <div class="nav-logo-icon">GG</div>
+                <div class="nav-logo-text">
+                    <span class="nav-logo-name">Gopal Govind</span>
+                    <span class="nav-logo-tagline">Ornaments</span>
+                </div>
+            </a>
+
+            <div class="nav-links" id="nav-links">
+                <a href="index.html" class="nav-link" onclick="closeMenu()">Home</a>
+                <a href="index.html#services" class="nav-link" onclick="closeMenu()">Services</a>
+                <a href="collections.html" class="nav-link" onclick="closeMenu()">Collections</a>
+                <a href="about.html" class="nav-link" onclick="closeMenu()">About</a>
+                <a href="contact.html" class="nav-link active" onclick="closeMenu()">Contact</a>
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <header class="page-hero">
+        <div class="container">
+            <div class="breadcrumb animate-on-scroll">
+                <a href="index.html">Home</a>
+                <span class="breadcrumb-sep">/</span>
+                <span class="breadcrumb-current">Contact Us</span>
+            </div>
+            <h1 class="page-hero-title animate-on-scroll" style="animation-delay: 0.1s">Get In Touch</h1>
+            <p class="page-hero-subtitle animate-on-scroll" style="animation-delay: 0.2s">Visit our showroom or reach
+                out to us — we'd love to help you find the perfect piece.</p>
+        </div>
+    </header>
+
+    <!-- Contact Info & Form -->
+    <section class="contact" style="padding-top: 80px;">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info-cards animate-on-scroll">
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="contact-card-title">Visit Our Showroom</h3>
+                            <p class="contact-card-text">156 — Tamboli Khancho's, Doshi Vadani Pole, Nr. Kika Mehta
+                                Pole, Gandhi Road, Ahmedabad</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="contact-card-title">Call Us</h3>
+                            <p class="contact-card-text"><a href="tel:+919904036646">+91 9904036646</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="contact-card-title">Email Us</h3>
+                            <p class="contact-card-text"><a
+                                    href="mailto:contact@gopalgovindornaments.in">contact@gopalgovindornaments.in</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <svg viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="contact-card-title">Working Hours</h3>
+                            <p class="contact-card-text">Mon — Sat: 10:00 AM — 8:00 PM<br>Sunday: By Appointment</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper animate-on-scroll">
+                    <h3 class="contact-form-title">Send Inquiry via WhatsApp</h3>
+                    <p class="contact-form-subtitle">Fill in your details and we'll receive your message on WhatsApp</p>
+                    <form id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-name">Your Name</label>
+                                <input type="text" id="contact-name" placeholder="Enter your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-phone">Phone Number</label>
+                                <input type="tel" id="contact-phone" placeholder="Enter phone number" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-interest">Interested In</label>
+                            <select id="contact-interest" required>
+                                <option value="">Select a category</option>
+                                <option value="Gold Jewellery">Gold Jewellery</option>
+                                <option value="Antic Jewellery">Antic Jewellery</option>
+                                <option value="Jadau Kundan Jewellery">Jadau Kundan Jewellery</option>
+                                <option value="Gemstone Jewellery">Gemstone Jewellery</option>
+                                <option value="Custom Design">Custom Design</option>
+                                <option value="Gemstone Sourcing">Gemstone Sourcing</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Your Message</label>
+                            <textarea id="contact-message" placeholder="Tell us what you're looking for..." rows="4"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit-whatsapp">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                            </svg>
+                            Send via WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section animate-on-scroll">
+        <div class="container">
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.9324545224385!2d72.58334461537243!3d23.02624532196651!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e85cc1b91316b%3A0x63cd27429d3c5096!2sGandhi%20Rd%2C%20Old%20City%2C%20Khadia%2C%20Ahmedabad%2C%20Gujarat%20380001!5e0!3m2!1sen!2sin!4v1689255018281!5m2!1sen!2sin"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-badge">Help Center</div>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="gold-line"></div>
+            </div>
+
+            <div class="faq-list animate-on-scroll" id="faq-list">
+                <!-- FAQs will be dynamically inserted by contact.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" class="nav-logo">
+                        <div class="nav-logo-icon">GG</div>
+                        <div class="nav-logo-text">
+                            <span class="nav-logo-name">Gopal Govind</span>
+                            <span class="nav-logo-tagline">Ornaments</span>
+                        </div>
+                    </a>
+                    <p class="footer-brand-description">
+                        Crafting exquisite jewellery with passion and precision. Every piece from our collection
+                        embodies
+                        the rich heritage of Indian jewellery artistry.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="collections.html">Collections</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Collections</h4>
+                    <ul class="footer-links">
+                        <li><a href="collections.html?category=gold">Gold Jewellery</a></li>
+                        <li><a href="collections.html?category=antic">Antic Jewellery</a></li>
+                        <li><a href="collections.html?category=kundan">Jadau Kundan</a></li>
+                        <li><a href="collections.html?category=gemstone">Gemstone Jewellery</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#services">Jewellery Manufacturing</a></li>
+                        <li><a href="index.html#services">Design Service</a></li>
+                        <li><a href="index.html#services">Custom Jewellery</a></li>
+                        <li><a href="index.html#services">Gemstone Sourcing</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2026 Gopal Govind Ornaments. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="back-to-top" onclick="scrollToTop()" aria-label="Back to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6" />
+        </svg>
+    </button>
+
+    <script src="data.js"></script>
+    <script src="shared.js"></script>
+    <script src="contact.js"></script>
+</body>
+
+</html>

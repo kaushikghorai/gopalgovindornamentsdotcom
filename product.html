@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail — Gopal Govind Ornaments</title>
+    <meta name="description" content="Discover the fine craftsmanship of our exclusive jewellery pieces.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E💎%3C/text%3E%3C/svg%3E">
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.documentElement.classList.add('dark-theme');
+            } else {
+                document.documentElement.classList.remove('dark-theme');
+            }
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="page-loader">
+        <div class="loader-logo">Gopal Govind <span>Ornaments</span></div>
+        <div class="loader-bar">
+            <div class="loader-progress"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <div class="nav-logo-icon">GG</div>
+                <div class="nav-logo-text">
+                    <span class="nav-logo-name">Gopal Govind</span>
+                    <span class="nav-logo-tagline">Ornaments</span>
+                </div>
+            </a>
+
+            <div class="nav-links" id="nav-links">
+                <a href="index.html" class="nav-link" onclick="closeMenu()">Home</a>
+                <a href="index.html#services" class="nav-link" onclick="closeMenu()">Services</a>
+                <a href="collections.html" class="nav-link" onclick="closeMenu()">Collections</a>
+                <a href="about.html" class="nav-link" onclick="closeMenu()">About</a>
+                <a href="contact.html" class="nav-link" onclick="closeMenu()">Contact</a>
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail-section" style="padding-top: 140px;">
+        <div class="container">
+            <div class="breadcrumb" id="product-breadcrumb" style="justify-content: flex-start; margin-bottom: 40px;">
+                <a href="index.html">Home</a>
+                <span class="breadcrumb-sep">/</span>
+                <a href="collections.html">Collections</a>
+                <span class="breadcrumb-sep">/</span>
+                <span class="breadcrumb-current" id="bc-category">...</span>
+                <span class="breadcrumb-sep">/</span>
+                <span class="breadcrumb-current" id="bc-product">...</span>
+            </div>
+
+            <div class="product-detail-grid">
+                <!-- Image Side -->
+                <div class="product-detail-image-wrapper animate-on-scroll">
+                    <img id="pd-image" src="" alt="Product Image">
+                </div>
+
+                <!-- Info Side -->
+                <div class="product-detail-info animate-on-scroll" style="animation-delay: 0.1s;">
+                    <div class="product-detail-badge" id="pd-badge">...</div>
+                    <h1 class="product-detail-name" id="pd-name">Loading...</h1>
+                    <div class="product-detail-price" id="pd-price">...</div>
+                    
+                    <p class="product-detail-description" id="pd-description">...</p>
+                    
+                    <div class="product-detail-specs">
+                        <div class="spec-row">
+                            <span class="spec-label">Material</span>
+                            <span class="spec-value" id="pd-material">...</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Craftsmanship</span>
+                            <span class="spec-value" id="pd-craft">...</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Availability</span>
+                            <span class="spec-value" style="color: #25d366;">Made to Order</span>
+                        </div>
+                    </div>
+
+                    <div class="product-detail-cta">
+                        <a href="#" class="btn-whatsapp-lg" id="pd-whatsapp-btn" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                            </svg>
+                            Order on WhatsApp
+                        </a>
+                        <a href="collections.html" class="btn-back-collections">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M19 12H5M12 19l-7-7 7-7"/>
+                            </svg>
+                            Back
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products-section">
+        <div class="container">
+            <h3 class="section-title" style="text-align: center; margin-bottom: 40px; font-size: 2rem;">You May Also Like</h3>
+            <div class="products-grid" id="related-products-grid">
+                <!-- Related products injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" class="nav-logo">
+                        <div class="nav-logo-icon">GG</div>
+                        <div class="nav-logo-text">
+                            <span class="nav-logo-name">Gopal Govind</span>
+                            <span class="nav-logo-tagline">Ornaments</span>
+                        </div>
+                    </a>
+                    <p class="footer-brand-description">
+                        Crafting exquisite jewellery with passion and precision. Every piece from our collection embodies
+                        the rich heritage of Indian jewellery artistry.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="collections.html">Collections</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Collections</h4>
+                    <ul class="footer-links">
+                        <li><a href="collections.html?category=gold">Gold Jewellery</a></li>
+                        <li><a href="collections.html?category=antic">Antic Jewellery</a></li>
+                        <li><a href="collections.html?category=kundan">Jadau Kundan</a></li>
+                        <li><a href="collections.html?category=gemstone">Gemstone Jewellery</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#services">Jewellery Manufacturing</a></li>
+                        <li><a href="index.html#services">Design Service</a></li>
+                        <li><a href="index.html#services">Custom Jewellery</a></li>
+                        <li><a href="index.html#services">Gemstone Sourcing</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2026 Gopal Govind Ornaments. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="shared.js"></script>
+    <script src="product-detail.js"></script>
+</body>
+
+</html>
