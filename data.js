@@ -810,9 +810,9 @@ Thank you!`;
 // ── Helper: Generate Product Card HTML ──
 function createProductCardHTML(product, index) {
   let weightsHTML = '';
-  if (product.weightLight) weightsHTML += `<div>Light: ${product.weightLight}</div>`;
-  if (product.weightMedium) weightsHTML += `<div>Medium: ${product.weightMedium}</div>`;
-  if (product.weightPremium) weightsHTML += `<div>Premium: ${product.weightPremium}</div>`;
+  if (product.weightLight)   weightsHTML += `<span class="weight-pill light">Light: ${product.weightLight}</span>`;
+  if (product.weightMedium)  weightsHTML += `<span class="weight-pill medium">Medium: ${product.weightMedium}</span>`;
+  if (product.weightPremium) weightsHTML += `<span class="weight-pill premium">Premium: ${product.weightPremium}</span>`;
 
   return `
     <div class="product-card" data-category="${product.category}" style="animation-delay: ${(index || 0) * 0.1}s">

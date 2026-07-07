@@ -114,20 +114,19 @@
                         </div>
                     </div>
 
-                    <div class="product-order-form" style="margin-top: 25px; padding: 20px; border: 1px solid var(--border-color); border-radius: 12px; background: rgba(255, 255, 255, 0.05);">
-                        <h3 style="margin-bottom: 15px; font-size: 1.2rem; font-family: var(--font-display);">Customize & Order</h3>
-                        
-                        <div style="margin-bottom: 15px;">
-                            <label for="order-weight" style="display: block; margin-bottom: 8px; font-size: 0.9rem; color: var(--text-secondary);">Select Weight Category</label>
-                            <select id="order-weight" class="form-control" style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid var(--border-color); background: transparent; color: var(--text-primary); cursor: pointer;">
-                                <option value="" selected>Not Specified</option>
-                                <!-- Options injected by JS -->
-                            </select>
+                    <div class="product-order-form" style="margin-top: 25px; padding: 22px; border: 1px solid rgba(212,160,23,0.2); border-radius: 14px; background: rgba(212,160,23,0.03);">
+                        <h3 style="margin-bottom: 18px; font-size: 1.15rem; font-family: var(--font-display);">Customize &amp; Order</h3>
+
+                        <div style="margin-bottom: 18px;">
+                            <label style="display: block; margin-bottom: 10px; font-size: 0.8rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--text-secondary);">Weight Category</label>
+                            <div class="weight-btn-group" id="weight-btn-group">
+                                <!-- Buttons injected by JS -->
+                            </div>
                         </div>
 
                         <div style="margin-bottom: 20px;">
-                            <label for="order-custom" style="display: block; margin-bottom: 8px; font-size: 0.9rem; color: var(--text-secondary);">Any changes/customizations?</label>
-                            <textarea id="order-custom" class="form-control" rows="3" style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid var(--border-color); background: transparent; color: var(--text-primary); resize: vertical;" placeholder="Let us know if you want any specific changes..."></textarea>
+                            <label for="order-custom" style="display: block; margin-bottom: 8px; font-size: 0.8rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--text-secondary);">Special Requests</label>
+                            <textarea id="order-custom" class="form-control" rows="3" style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1px solid rgba(212,160,23,0.2); background: transparent; color: var(--text-primary); resize: vertical; font-family: var(--font-body); font-size: 0.9rem; outline: none;" placeholder="Any changes or customizations..."></textarea>
                         </div>
 
                         <button id="pd-submit-order" class="btn-whatsapp-lg" style="width: 100%; justify-content: center; border: none; cursor: pointer;">

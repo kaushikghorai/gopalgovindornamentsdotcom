@@ -48,23 +48,53 @@ function renderProductDetails(product) {
   
   document.getElementById('pd-specs').innerHTML = weightsHTML;
   
-  // Order Form
-  const weightSelect = document.getElementById('order-weight');
-  if (weightSelect) {
-    weightSelect.innerHTML = '<option value="" selected>Not Specified</option>';
-    if (product.weightLight) weightSelect.innerHTML += `<option value="Light (${product.weightLight})">Light (${product.weightLight})</option>`;
-    if (product.weightMedium) weightSelect.innerHTML += `<option value="Medium (${product.weightMedium})">Medium (${product.weightMedium})</option>`;
-    if (product.weightPremium) weightSelect.innerHTML += `<option value="Premium (${product.weightPremium})">Premium (${product.weightPremium})</option>`;
+  // Order Form — Weight Buttons
+  const weightBtnGroup = document.getElementById('weight-btn-group');
+  let selectedWeight = '';
+
+  if (weightBtnGroup) {
+    weightBtnGroup.innerHTML = '';
+
+    const weights = [];
+    if (product.weightLight)   weights.push({ label: 'Light',   range: product.weightLight,   cls: 'light' });
+    if (product.weightMedium)  weights.push({ label: 'Medium',  range: product.weightMedium,  cls: 'medium' });
+    if (product.weightPremium) weights.push({ label: 'Premium', range: product.weightPremium, cls: 'premium' });
+
+    if (weights.length === 0) {
+      weightBtnGroup.innerHTML = '<span style="font-size:0.85rem;color:var(--text-muted);">No weight options available</span>';
+    } else {
+      // Add a "Not Specified" button first
+      const nsBtn = document.createElement('button');
+      nsBtn.className = 'weight-btn active';
+      nsBtn.type = 'button';
+      nsBtn.innerHTML = '<span class="btn-weight-label">Any</span>';
+      nsBtn.dataset.value = '';
+      weightBtnGroup.appendChild(nsBtn);
+
+      weights.forEach(w => {
+        const btn = document.createElement('button');
+        btn.className = 'weight-btn';
+        btn.type = 'button';
+        btn.innerHTML = `<span class="btn-weight-label">${w.label}</span><span class="btn-weight-range">${w.range}</span>`;
+        btn.dataset.value = `${w.label} (${w.range})`;
+        weightBtnGroup.appendChild(btn);
+      });
+
+      weightBtnGroup.querySelectorAll('.weight-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          weightBtnGroup.querySelectorAll('.weight-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          selectedWeight = btn.dataset.value;
+        });
+      });
+    }
   }
 
   const submitBtn = document.getElementById('pd-submit-order');
   if (submitBtn) {
-    // Remove old event listeners by cloning if necessary, or just assign onclick
     submitBtn.onclick = (e) => {
       e.preventDefault();
-      const selectedWeight = weightSelect ? weightSelect.value : '';
       const customizations = document.getElementById('order-custom') ? document.getElementById('order-custom').value.trim() : '';
-      
       const link = generateWhatsAppLink(product, selectedWeight, customizations);
       window.open(link, '_blank');
     };
