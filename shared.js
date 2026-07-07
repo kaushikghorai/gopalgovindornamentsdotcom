@@ -103,10 +103,40 @@ function initScrollAnimations() {
 function setActiveNavLink() {
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-link').forEach(link => {
-    const href = link.getAttribute('href');
-    if (href === currentPage || (currentPage === 'index.html' && href === 'index.html')) {
+    const href = (link.getAttribute('href') || '').split('#')[0]; // strip hash
+    if (
+      href === currentPage ||
+      (currentPage === '' && href === 'index.html') ||
+      (currentPage === 'index.html' && href === 'index.html')
+    ) {
       link.classList.add('active');
     }
+  });
+}
+
+// ── Gold Scroll Progress Bar ──
+function initScrollProgressBar() {
+  const bar = document.createElement('div');
+  bar.className = 'scroll-progress-bar';
+  bar.id = 'scroll-progress-bar';
+  document.body.prepend(bar);
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }, { passive: true });
+}
+
+// ── Page Fade-In ──
+function initPageFadeIn() {
+  document.body.style.opacity = '0';
+  document.body.style.transition = 'opacity 0.5s ease';
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      document.body.style.opacity = '1';
+    });
   });
 }
 
@@ -118,4 +148,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initBackToTop();
   initScrollAnimations();
   setActiveNavLink();
+  initScrollProgressBar();
+  initPageFadeIn();
 });
