@@ -4,7 +4,7 @@
    ======================================== */
 
 // ── WhatsApp Configuration ──
-const WHATSAPP_NUMBER = '9904036646';
+const WHATSAPP_NUMBER = '919904036646';
 const STORE_NAME = 'Gopal Govind Ornaments';
 
 // ── Category Definitions ──
