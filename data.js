@@ -790,10 +790,20 @@ const faqs = [
 
 // ── Helper: Generate WhatsApp Link ──
 function generateWhatsAppLink(product, weight, customizations) {
-  const productLink = `www.gopalgovindornaments.com/product.html?id=${product.id}`;
+  const productLink = `https://www.gopalgovindornaments.com/product.html?id=${product.id}`;
   const customText = customizations ? customizations : 'None';
   const weightText = weight ? weight : 'Not Specified';
-  const message = `Hello ${STORE_NAME}! 👋\n\nI'm interested in ordering:\n📿 *${product.name}*\n📦 Category: ${product.category}\n🔗 Link: ${productLink}\n\n⚖️ Preferred weight category: ${weightText}\n\n📝 Requested changes/customizations: ${customText}\n\nThank you! 🙏`;
+  const message = `Hello ${STORE_NAME}!
+
+I'm interested in ordering:
+*${product.name}*
+Category: ${product.category}
+Product Link: ${productLink}
+
+Preferred weight category: ${weightText}
+Requested changes/customizations: ${customText}
+
+Thank you!`;
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
 
