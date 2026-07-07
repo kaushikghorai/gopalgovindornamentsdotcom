@@ -3,8 +3,7 @@
    ======================================== */
 
 let currentFilters = {
-  categories: [],
-  materials: []
+  categories: []
 };
 
 let currentSort = 'default';
@@ -32,7 +31,6 @@ function parseUrlParams() {
 // ── Render Filter Options ──
 function renderFilterOptions() {
   const categoryContainer = document.getElementById('filter-categories');
-  const materialContainer = document.getElementById('filter-materials');
 
   if (categoryContainer) {
     categoryContainer.innerHTML = CATEGORIES.map(cat => `
@@ -40,17 +38,6 @@ function renderFilterOptions() {
         <div class="filter-checkbox"></div>
         <span class="filter-label">${cat.label}</span>
         <span class="filter-count">(${products.filter(p => p.category === cat.key).length})</span>
-      </div>
-    `).join('');
-  }
-
-  if (materialContainer) {
-    const materials = getUniqueMaterials();
-    materialContainer.innerHTML = materials.map(mat => `
-      <div class="filter-option ${currentFilters.materials.includes(mat) ? 'active' : ''}" data-type="materials" data-value="${mat}">
-        <div class="filter-checkbox"></div>
-        <span class="filter-label">${mat}</span>
-        <span class="filter-count">(${products.filter(p => p.material === mat).length})</span>
       </div>
     `).join('');
   }
@@ -83,7 +70,7 @@ function setupFilterListeners() {
   const resetBtn = document.getElementById('filter-reset');
   if (resetBtn) {
     resetBtn.addEventListener('click', () => {
-      currentFilters = { categories: [], materials: [] };
+      currentFilters = { categories: [] };
       document.querySelectorAll('.filter-option').forEach(opt => opt.classList.remove('active'));
       updateUrlParams();
       applyFiltersAndRender();
@@ -109,10 +96,6 @@ function applyFiltersAndRender() {
 
   if (currentFilters.categories.length > 0) {
     filtered = filtered.filter(p => currentFilters.categories.includes(p.category));
-  }
-
-  if (currentFilters.materials.length > 0) {
-    filtered = filtered.filter(p => currentFilters.materials.includes(p.material));
   }
 
   // Sort

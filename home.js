@@ -14,8 +14,8 @@ function renderFeaturedProducts() {
   const grid = document.getElementById('featured-products-grid');
   if (!grid) return;
 
-  // Show only 4 featured products
-  const featured = products.filter(p => p.featured).slice(0, 4);
+  // Show first 4 products
+  const featured = products.slice(0, 4);
 
   grid.innerHTML = featured.map((product, index) => createProductCardHTML(product, index)).join('');
 }
