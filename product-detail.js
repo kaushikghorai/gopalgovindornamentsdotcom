@@ -51,7 +51,7 @@ function renderProductDetails(product) {
   // Order Form
   const weightSelect = document.getElementById('order-weight');
   if (weightSelect) {
-    weightSelect.innerHTML = '<option value="" disabled selected>Please select a weight</option>';
+    weightSelect.innerHTML = '<option value="" selected>Not Specified</option>';
     if (product.weightLight) weightSelect.innerHTML += `<option value="Light (${product.weightLight})">Light (${product.weightLight})</option>`;
     if (product.weightMedium) weightSelect.innerHTML += `<option value="Medium (${product.weightMedium})">Medium (${product.weightMedium})</option>`;
     if (product.weightPremium) weightSelect.innerHTML += `<option value="Premium (${product.weightPremium})">Premium (${product.weightPremium})</option>`;
@@ -64,11 +64,6 @@ function renderProductDetails(product) {
       e.preventDefault();
       const selectedWeight = weightSelect ? weightSelect.value : '';
       const customizations = document.getElementById('order-custom') ? document.getElementById('order-custom').value.trim() : '';
-      
-      if (!selectedWeight) {
-        alert('Please select a weight category before ordering.');
-        return;
-      }
       
       const link = generateWhatsAppLink(product, selectedWeight, customizations);
       window.open(link, '_blank');
