@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Collections — Gopal Govind Ornaments</title>
-    <meta name="description" content="Explore our exquisite handcrafted jewellery collections including Gold, Antic, Kundan, and Gemstone pieces.">
+    <title>Collections — Gopal Govind Ornaments | Handcrafted Jewellery, Ahmedabad</title>
+    <meta name="description" content="Explore our exquisite handcrafted jewellery — Gold Haar, Earrings, Bangles, and Rings. Filter by category and discover pieces crafted for every occasion.">
+    <meta name="keywords" content="gold jewellery collection, earrings, bangles, necklace, haar, rings, Ahmedabad jeweller">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E💎%3C/text%3E%3C/svg%3E">
     <script>
@@ -62,6 +63,7 @@
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
                 </button>
+
             </div>
 
             <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu">
@@ -73,38 +75,135 @@
     </nav>
 
     <!-- Page Hero -->
-    <header class="page-hero">
+    <header class="page-hero collections-page-hero">
+        <div class="collections-hero-bg-ring"></div>
+        <div class="collections-hero-bg-ring collections-hero-bg-ring-2"></div>
         <div class="container">
             <div class="breadcrumb animate-on-scroll">
                 <a href="index.html">Home</a>
                 <span class="breadcrumb-sep">/</span>
                 <span class="breadcrumb-current">Collections</span>
             </div>
-            <h1 class="page-hero-title animate-on-scroll" style="animation-delay: 0.1s">Our Collections</h1>
-            <p class="page-hero-subtitle animate-on-scroll" style="animation-delay: 0.2s">Explore our masterfully crafted pieces, where tradition meets contemporary elegance.</p>
+            <div class="section-badge animate-on-scroll" style="animation-delay:0.05s">Our Catalogue</div>
+            <h1 class="page-hero-title animate-on-scroll" style="animation-delay: 0.1s">Discover Our <span class="collections-title-accent">Collections</span></h1>
+            <p class="page-hero-subtitle animate-on-scroll" style="animation-delay: 0.2s">Masterfully crafted pieces where tradition meets contemporary elegance</p>
+
+            <!-- Hero Stats Strip -->
+            <div class="collections-hero-stats animate-on-scroll" style="animation-delay:0.3s">
+                <div class="collections-hero-stat">
+                    <span class="collections-hero-stat-num" id="coll-stat-products">79</span>
+                    <span class="collections-hero-stat-label">Pieces</span>
+                </div>
+                <div class="collections-hero-divider"></div>
+                <div class="collections-hero-stat">
+                    <span class="collections-hero-stat-num">4</span>
+                    <span class="collections-hero-stat-label">Categories</span>
+                </div>
+                <div class="collections-hero-divider"></div>
+                <div class="collections-hero-stat">
+                    <span class="collections-hero-stat-num">22K</span>
+                    <span class="collections-hero-stat-label">Gold Purity</span>
+                </div>
+                <div class="collections-hero-divider"></div>
+                <div class="collections-hero-stat">
+                    <span class="collections-hero-stat-num">BIS</span>
+                    <span class="collections-hero-stat-label">Hallmarked</span>
+                </div>
+            </div>
         </div>
     </header>
+
+    <!-- Category Tab Bar (full-width pill tabs) -->
+    <div class="collections-tab-bar">
+        <div class="container">
+            <div class="collections-tabs" id="collections-tabs" role="tablist">
+                <button class="collections-tab active" data-category="all" role="tab" aria-selected="true" id="ctab-all">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                    All
+                </button>
+                <button class="collections-tab" data-category="necklace" role="tab" aria-selected="false" id="ctab-necklace">
+                    <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    Haar &amp; Necklaces
+                </button>
+                <button class="collections-tab" data-category="earrings" role="tab" aria-selected="false" id="ctab-earrings">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="3"/><path d="M12 8v13"/><circle cx="12" cy="21" r="1"/></svg>
+                    Earrings
+                </button>
+                <button class="collections-tab" data-category="bangals" role="tab" aria-selected="false" id="ctab-bangals">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/></svg>
+                    Bangles
+                </button>
+            </div>
+        </div>
+    </div>
 
     <!-- Collections Content -->
     <section class="collections-layout">
         <!-- Sidebar Filters -->
         <aside class="filter-sidebar">
-            <button class="filter-toggle-mobile" id="filter-toggle-mobile">
-                <svg viewBox="0 0 24 24"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg>
-                Filters
-            </button>
-            
+            <!-- Search Box -->
+            <div class="filter-search-box">
+                <svg viewBox="0 0 24 24" class="filter-search-icon">
+                    <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+                </svg>
+                <input type="text" id="filter-search" placeholder="Search jewellery…" class="filter-search-input" aria-label="Search products">
+            </div>
+
             <div class="filter-sections-wrapper" id="filter-sections">
+                <!-- Category Filter -->
                 <div class="filter-section animate-on-scroll">
-                    <h3 class="filter-section-title">Categories</h3>
+                    <h3 class="filter-section-title">
+                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none" stroke-width="2"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg>
+                        Categories
+                    </h3>
                     <div id="filter-categories">
                         <!-- Categories injected by JS -->
                     </div>
                 </div>
 
+                <!-- Weight Filter -->
+                <div class="filter-section animate-on-scroll" style="animation-delay: 0.1s">
+                    <h3 class="filter-section-title">
+                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/><path d="M17 3v4"/><path d="M21 7h-4"/></svg>
+                        Weight Range
+                    </h3>
+                    <div class="filter-weight-options" id="filter-weights">
+                        <div class="filter-option active" data-type="weights" data-value="all" id="fw-all">
+                            <div class="filter-checkbox"></div>
+                            <span class="filter-label">All Weights</span>
+                        </div>
+                        <div class="filter-option" data-type="weights" data-value="light" id="fw-light">
+                            <div class="filter-checkbox"></div>
+                            <span class="filter-label">Light (3–20g)</span>
+                            <span class="filter-count-pill filter-pill-light">Light</span>
+                        </div>
+                        <div class="filter-option" data-type="weights" data-value="medium" id="fw-medium">
+                            <div class="filter-checkbox"></div>
+                            <span class="filter-label">Medium (15–60g)</span>
+                            <span class="filter-count-pill filter-pill-medium">Medium</span>
+                        </div>
+                        <div class="filter-option" data-type="weights" data-value="premium" id="fw-premium">
+                            <div class="filter-checkbox"></div>
+                            <span class="filter-label">Premium (40–100g)</span>
+                            <span class="filter-count-pill filter-pill-premium">Premium</span>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Quick Action -->
+                <div class="filter-cta-box animate-on-scroll" style="animation-delay:0.2s">
+                    <div class="filter-cta-icon">💎</div>
+                    <p class="filter-cta-text">Need something custom?</p>
+                    <a href="https://wa.me/919904036646?text=Hello!%20I'd%20like%20to%20inquire%20about%20custom%20jewellery%20design."
+                        class="filter-cta-btn" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        Chat on WhatsApp
+                    </a>
+                </div>
 
-                <button class="filter-reset-btn animate-on-scroll" id="filter-reset" style="animation-delay: 0.2s">
+                <button class="filter-reset-btn animate-on-scroll" id="filter-reset" style="animation-delay: 0.3s">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
                         <path d="M3 3v5h5"/>
@@ -112,21 +211,38 @@
                     Reset All Filters
                 </button>
             </div>
+
+            <!-- Mobile Filter Toggle -->
+            <button class="filter-toggle-mobile" id="filter-toggle-mobile">
+                <svg viewBox="0 0 24 24"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg>
+                Filters &amp; Sort
+            </button>
         </aside>
 
         <!-- Product Grid Area -->
         <main class="collections-main">
+            <!-- Active Filter Chips -->
+            <div class="active-filter-chips" id="active-filter-chips" style="display:none">
+                <!-- Injected by JS -->
+            </div>
+
             <div class="collection-toolbar animate-on-scroll">
-                <div class="collection-count" id="collection-count">
-                    Showing <strong>0</strong> items
+                <div class="collection-count-wrapper">
+                    <div class="collection-count" id="collection-count">
+                        Showing <strong>0</strong> items
+                    </div>
+                    <div class="collection-active-badge" id="collection-active-badge" style="display:none">
+                        <span id="collection-active-text">Filtered</span>
+                        <button class="badge-clear-btn" id="badge-clear-btn" aria-label="Clear filters">×</button>
+                    </div>
                 </div>
                 <div class="collection-controls">
                     <select class="sort-select" id="sort-select" aria-label="Sort products">
                         <option value="default">Default Sorting</option>
-                        <option value="az">Alphabetically, A-Z</option>
-                        <option value="za">Alphabetically, Z-A</option>
+                        <option value="az">Name: A–Z</option>
+                        <option value="za">Name: Z–A</option>
                     </select>
-                    
+
                     <div class="view-toggle">
                         <button class="view-btn active" id="view-grid" aria-label="Grid view">
                             <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
@@ -140,6 +256,12 @@
 
             <div class="products-grid" id="products-grid">
                 <!-- Products injected by JS -->
+            </div>
+
+            <!-- Infinite Scroll Sentinel -->
+            <div id="scroll-sentinel" style="height:1px;margin-top:40px;"></div>
+            <div id="scroll-loader" style="display:none; justify-content:center; padding:32px 0;">
+                <div class="scroll-spinner"></div>
             </div>
         </main>
     </section>
@@ -174,10 +296,9 @@
                 <div>
                     <h4 class="footer-heading">Collections</h4>
                     <ul class="footer-links">
-                        <li><a href="collections.html?category=gold">Gold Jewellery</a></li>
-                        <li><a href="collections.html?category=antic">Antic Jewellery</a></li>
-                        <li><a href="collections.html?category=kundan">Jadau Kundan</a></li>
-                        <li><a href="collections.html?category=gemstone">Gemstone Jewellery</a></li>
+                        <li><a href="collections.html?category=necklace">Haar &amp; Necklaces</a></li>
+                        <li><a href="collections.html?category=earrings">Earrings</a></li>
+                        <li><a href="collections.html?category=bangals">Bangles</a></li>
                     </ul>
                 </div>
                 <div>
@@ -192,9 +313,35 @@
             </div>
             <div class="footer-bottom">
                 <p class="footer-copyright">&copy; 2026 Gopal Govind Ornaments. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://wa.me/919904036646" target="_blank" rel="noopener" aria-label="WhatsApp">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                        </svg>
+                    </a>
+                    <a href="tel:+919904036646" aria-label="Phone">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+                        </svg>
+                    </a>
+                    <a href="mailto:contact@gopalgovindornaments.in" aria-label="Email">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919904036646?text=Hello%20Gopal%20Govind%20Ornaments!%20I'm%20interested%20in%20your%20jewellery%20collection."
+        class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" id="whatsapp-float">
+        <svg viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+    </a>
 
     <!-- Back to Top -->
     <button class="back-to-top" id="back-to-top" onclick="scrollToTop()" aria-label="Back to top">
@@ -205,7 +352,7 @@
 
     <script src="data.js"></script>
     <script src="shared.js"></script>
-    <script src="collections.js"></script>
+    <script src="collections.js?v=2"></script>
 </body>
 
 </html>
