@@ -71,14 +71,7 @@
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
                 </button>
-                <a href="https://wa.me/917202951855?text=Hello%20Gopal%20Govind%20Ornaments!%20I'm%20interested%20in%20your%20jewellery%20collection."
-                    class="nav-whatsapp" target="_blank" rel="noopener">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path
-                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                    </svg>
-                    Chat Now
-                </a>
+
             </div>
 
             <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu">
@@ -91,6 +84,7 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
+        <canvas id="hero-particles"></canvas>
         <div class="container">
             <div class="hero-content">
                 <div class="hero-badge">
@@ -155,6 +149,55 @@
             </div>
         </div>
     </section>
+
+    <!-- Hero Marquee Ticker -->
+    <div class="hero-ticker" aria-hidden="true">
+        <div class="hero-ticker-track" id="hero-ticker-track">
+            <!-- Items duplicated for seamless loop -->
+            <span class="hero-ticker-item">BIS Hallmarked Gold<span class="hero-ticker-dot"></span></span>
+            <span class="hero-ticker-item">22K &amp; 24K Certified<span class="hero-ticker-dot"></span></span>
+            <span class="hero-ticker-item">Custom Jewellery Design<span class="hero-ticker-dot"></span></span>
+            <span class="hero-ticker-item">Since 3 Decades<span class="hero-ticker-dot"></span></span>
+            <span class="hero-ticker-item">Handcrafted Excellence<span class="hero-ticker-dot"></span></span>
+            <span class="hero-ticker-item">Ethically Sourced Gemstones<span class="hero-ticker-dot"></span></span>
+            <span class="hero-ticker-item">Gandhi Road, Ahmedabad<span class="hero-ticker-dot"></span></span>
+            <span class="hero-ticker-item">5000+ Happy Clients<span class="hero-ticker-dot"></span></span>
+            <!-- Duplicate set for seamless loop -->
+            <span class="hero-ticker-item">BIS Hallmarked Gold<span class="hero-ticker-dot"></span></span>
+            <span class="hero-ticker-item">22K &amp; 24K Certified<span class="hero-ticker-dot"></span></span>
+            <span class="hero-ticker-item">Custom Jewellery Design<span class="hero-ticker-dot"></span></span>
+            <span class="hero-ticker-item">Since 3 Decades<span class="hero-ticker-dot"></span></span>
+            <span class="hero-ticker-item">Handcrafted Excellence<span class="hero-ticker-dot"></span></span>
+            <span class="hero-ticker-item">Ethically Sourced Gemstones<span class="hero-ticker-dot"></span></span>
+            <span class="hero-ticker-item">Gandhi Road, Ahmedabad<span class="hero-ticker-dot"></span></span>
+            <span class="hero-ticker-item">5000+ Happy Clients<span class="hero-ticker-dot"></span></span>
+        </div>
+    </div>
+
+    <!-- Gold Rate Banner -->
+    <div class="gold-rate-banner" id="gold-rate-banner">
+        <div class="container">
+            <div class="gold-rate-inner">
+                <div class="gold-rate-live-dot">Live Indicative</div>
+                <div class="gold-rate-divider"></div>
+                <div class="gold-rate-item">
+                    <span class="gold-rate-karat">22K</span>
+                    <span class="gold-rate-price" id="rate-22k">₹6,842</span>
+                    <span class="gold-rate-unit">/gram</span>
+                    <span class="gold-rate-change" id="change-22k">▲ 0.4%</span>
+                </div>
+                <div class="gold-rate-divider"></div>
+                <div class="gold-rate-item">
+                    <span class="gold-rate-karat">24K</span>
+                    <span class="gold-rate-price" id="rate-24k">₹7,461</span>
+                    <span class="gold-rate-unit">/gram</span>
+                    <span class="gold-rate-change" id="change-24k">▲ 0.3%</span>
+                </div>
+                <div class="gold-rate-divider"></div>
+                <div class="gold-rate-note">* Indicative prices. Contact us for today's exact rate.</div>
+            </div>
+        </div>
+    </div>
 
     <!-- Services Section -->
     <section class="services" id="services">
@@ -224,6 +267,225 @@
         </div>
     </section>
 
+    <!-- Why Choose Us Section -->
+    <section class="why-section" id="why-us">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-badge">Our Promise</div>
+                <h2 class="section-title">Why Choose Us</h2>
+                <div class="gold-line"></div>
+                <p class="section-subtitle">Six reasons why thousands of families trust Gopal Govind Ornaments for life's most precious moments</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card animate-on-scroll">
+                    <span class="why-card-number">01</span>
+                    <div class="why-card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <div class="why-card-title">BIS Hallmarked Gold</div>
+                    <div class="why-card-desc">Every piece is certified under the Bureau of Indian Standards hallmark — guaranteed purity you can trust with pride.</div>
+                    <div class="why-card-highlight">22K &amp; 24K Certified</div>
+                </div>
+                <div class="why-card animate-on-scroll">
+                    <span class="why-card-number">02</span>
+                    <div class="why-card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><circle cx="11" cy="11" r="2"/></svg>
+                    </div>
+                    <div class="why-card-title">Bespoke Custom Design</div>
+                    <div class="why-card-desc">Your dream jewellery, brought to life. Share your vision — our master artisans sketch, refine, and craft it perfectly.</div>
+                    <div class="why-card-highlight">2–4 Week Turnaround</div>
+                </div>
+                <div class="why-card animate-on-scroll">
+                    <span class="why-card-number">03</span>
+                    <div class="why-card-icon">
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <div class="why-card-title">Certified Gemstones</div>
+                    <div class="why-card-desc">Ethically sourced rubies, emeralds, sapphires and polki diamonds — each stone comes with lab certification.</div>
+                    <div class="why-card-highlight">Lab Certified</div>
+                </div>
+                <div class="why-card animate-on-scroll">
+                    <span class="why-card-number">04</span>
+                    <div class="why-card-icon">
+                        <svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                    </div>
+                    <div class="why-card-title">Hassle-Free Exchange</div>
+                    <div class="why-card-desc">Exchange your gold jewellery at current market rates, any time. Transparent, fair, and straightforward — always.</div>
+                    <div class="why-card-highlight">Market Rate Exchange</div>
+                </div>
+                <div class="why-card animate-on-scroll">
+                    <span class="why-card-number">05</span>
+                    <div class="why-card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    </div>
+                    <div class="why-card-title">Free WhatsApp Consult</div>
+                    <div class="why-card-desc">Get expert jewellery advice from our team instantly on WhatsApp — no appointment, no wait, anytime you need us.</div>
+                    <div class="why-card-highlight">Instant Response</div>
+                </div>
+                <div class="why-card animate-on-scroll">
+                    <span class="why-card-number">06</span>
+                    <div class="why-card-icon">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <div class="why-card-title">25+ Years of Legacy</div>
+                    <div class="why-card-desc">Three decades of unwavering craftsmanship, 5,000+ happy families, and a reputation built on trust and artistry.</div>
+                    <div class="why-card-highlight">Est. 1999, Ahmedabad</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Showcase Section -->
+    <section class="category-showcase" id="categories">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-badge">Explore By Category</div>
+                <h2 class="section-title">Our Collections</h2>
+                <div class="gold-line"></div>
+                <p class="section-subtitle">Four distinct worlds of fine jewellery, each telling its own story</p>
+            </div>
+
+            <div class="category-tiles">
+                <a href="collections.html?category=necklace" class="category-tile animate-on-scroll">
+                    <img src="images/nacklace41.png" alt="Gold Necklace Collection" class="category-tile-image" loading="lazy">
+                    <div class="category-tile-overlay"></div>
+                    <div class="category-tile-content">
+                        <span class="category-tile-label">Collection</span>
+                        <div class="category-tile-name">Haar &amp; Necklaces</div>
+                        <div class="category-tile-count">
+                            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            View Collection
+                        </div>
+                    </div>
+                </a>
+
+                <a href="collections.html?category=earrings" class="category-tile animate-on-scroll">
+                    <img src="images/earrings5.png" alt="Earrings Collection" class="category-tile-image" loading="lazy">
+                    <div class="category-tile-overlay"></div>
+                    <div class="category-tile-content">
+                        <span class="category-tile-label">Collection</span>
+                        <div class="category-tile-name">Earrings</div>
+                        <div class="category-tile-count">
+                            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            View Collection
+                        </div>
+                    </div>
+                </a>
+
+                <a href="collections.html?category=bangals" class="category-tile animate-on-scroll">
+                    <img src="images/bangles54.png" alt="Bangles Collection" class="category-tile-image" loading="lazy">
+                    <div class="category-tile-overlay"></div>
+                    <div class="category-tile-content">
+                        <span class="category-tile-label">Collection</span>
+                        <div class="category-tile-name">Bangles</div>
+                        <div class="category-tile-count">
+                            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            View Collection
+                        </div>
+                    </div>
+                </a>
+
+                <a href="collections.html?category=rings" class="category-tile animate-on-scroll">
+                    <img src="images/ruby_ring.png" alt="Rings Collection" class="category-tile-image" loading="lazy">
+                    <div class="category-tile-overlay"></div>
+                    <div class="category-tile-content">
+                        <span class="category-tile-label">Collection</span>
+                        <div class="category-tile-name">Rings</div>
+                        <div class="category-tile-count">
+                            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            View Collection
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bridal Lookbook Section -->
+    <section class="lookbook-section" id="lookbook">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-badge">Bridal Showcase</div>
+                <h2 class="section-title">Bridal Lookbook</h2>
+                <div class="gold-line"></div>
+                <p class="section-subtitle">Drag to explore our most coveted bridal sets — crafted for the most memorable day of your life</p>
+            </div>
+            <div class="lookbook-track-wrapper" id="lookbook-wrapper">
+                <div class="lookbook-track" id="lookbook-track">
+                    <div class="lookbook-slide">
+                        <img src="images/kundan_bridal.png" alt="Kundan Bridal Set" loading="lazy">
+                        <div class="lookbook-slide-overlay"></div>
+                        <div class="lookbook-slide-content">
+                            <span class="lookbook-slide-tag">Jadau Kundan</span>
+                            <div class="lookbook-slide-title">The Royal Bridal Set</div>
+                            <a href="collections.html?category=necklace" class="lookbook-slide-cta">
+                                Explore Collection
+                                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lookbook-slide">
+                        <img src="images/gold_antique_nacklace.png" alt="Antique Gold Necklace" loading="lazy">
+                        <div class="lookbook-slide-overlay"></div>
+                        <div class="lookbook-slide-content">
+                            <span class="lookbook-slide-tag">Antique Gold</span>
+                            <div class="lookbook-slide-title">Heritage Bridal Haar</div>
+                            <a href="collections.html?category=necklace" class="lookbook-slide-cta">
+                                Explore Collection
+                                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lookbook-slide">
+                        <img src="images/kundan_necklace.png" alt="Kundan Necklace" loading="lazy">
+                        <div class="lookbook-slide-overlay"></div>
+                        <div class="lookbook-slide-content">
+                            <span class="lookbook-slide-tag">Kundan Meenakari</span>
+                            <div class="lookbook-slide-title">Bridal Meenakari Set</div>
+                            <a href="collections.html?category=necklace" class="lookbook-slide-cta">
+                                Explore Collection
+                                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lookbook-slide">
+                        <img src="images/gold_haar_necklace.png" alt="Gold Haar" loading="lazy">
+                        <div class="lookbook-slide-overlay"></div>
+                        <div class="lookbook-slide-content">
+                            <span class="lookbook-slide-tag">22K Gold</span>
+                            <div class="lookbook-slide-title">Classic Gold Haar</div>
+                            <a href="collections.html?category=necklace" class="lookbook-slide-cta">
+                                Explore Collection
+                                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lookbook-slide">
+                        <img src="images/gold_antique_nacklace_red.png" alt="Antique Necklace Red" loading="lazy">
+                        <div class="lookbook-slide-overlay"></div>
+                        <div class="lookbook-slide-content">
+                            <span class="lookbook-slide-tag">Temple Jewellery</span>
+                            <div class="lookbook-slide-title">South Indian Bridal</div>
+                            <a href="collections.html?category=necklace" class="lookbook-slide-cta">
+                                Explore Collection
+                                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lookbook-nav">
+                <button class="lookbook-nav-btn" id="lookbook-prev" aria-label="Previous slide">
+                    <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                </button>
+                <div class="lookbook-dots" id="lookbook-dots"></div>
+                <button class="lookbook-nav-btn" id="lookbook-next" aria-label="Next slide">
+                    <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
     <!-- Products Section -->
     <section class="products" id="products">
         <div class="container">
@@ -232,6 +494,14 @@
                 <h2 class="section-title">Featured Jewellery</h2>
                 <div class="gold-line"></div>
                 <p class="section-subtitle">Discover hand-picked masterpieces from our extensive collections</p>
+            </div>
+
+            <!-- Homepage Category Filter Tabs -->
+            <div class="home-filter-tabs" id="home-filter-tabs" role="tablist" aria-label="Filter products by category">
+                <button class="home-filter-tab active" data-category="all" role="tab" aria-selected="true" id="tab-all">All</button>
+                <button class="home-filter-tab" data-category="necklace" role="tab" aria-selected="false" id="tab-necklace">Necklaces</button>
+                <button class="home-filter-tab" data-category="earrings" role="tab" aria-selected="false" id="tab-earrings">Earrings</button>
+                <button class="home-filter-tab" data-category="bangals" role="tab" aria-selected="false" id="tab-bangals">Bangles</button>
             </div>
 
             <div class="products-grid" id="featured-products-grid">
@@ -246,6 +516,82 @@
                         <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process / How It Works Section -->
+    <section class="process-section" id="process">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-badge">Our Craft</div>
+                <h2 class="section-title">How We Work</h2>
+                <div class="gold-line"></div>
+                <p class="section-subtitle">From your first conversation to the final masterpiece — a seamless journey</p>
+            </div>
+
+            <div class="process-steps">
+                <div class="process-step animate-on-scroll">
+                    <div class="process-step-number">
+                        <svg class="process-step-icon" viewBox="0 0 24 24">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                        <div class="process-step-tag">1</div>
+                    </div>
+                    <h3 class="process-step-title">Consult</h3>
+                    <p class="process-step-description">Share your vision with our master jewellers — in person or via WhatsApp.</p>
+                </div>
+
+                <div class="process-step animate-on-scroll">
+                    <div class="process-step-number">
+                        <svg class="process-step-icon" viewBox="0 0 24 24">
+                            <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+                            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+                            <path d="M2 2l7.586 7.586"/>
+                            <circle cx="11" cy="11" r="2"/>
+                        </svg>
+                        <div class="process-step-tag">2</div>
+                    </div>
+                    <h3 class="process-step-title">Design</h3>
+                    <p class="process-step-description">Our artisans sketch and refine your custom design with gemstone selection.</p>
+                </div>
+
+                <div class="process-step animate-on-scroll">
+                    <div class="process-step-number">
+                        <svg class="process-step-icon" viewBox="0 0 24 24">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                        <div class="process-step-tag">3</div>
+                    </div>
+                    <h3 class="process-step-title">Craft</h3>
+                    <p class="process-step-description">Handcrafted in our workshop using certified 22K gold and precious stones.</p>
+                </div>
+
+                <div class="process-step animate-on-scroll">
+                    <div class="process-step-number">
+                        <svg class="process-step-icon" viewBox="0 0 24 24">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                        <div class="process-step-tag">4</div>
+                    </div>
+                    <h3 class="process-step-title">Deliver</h3>
+                    <p class="process-step-description">Receive your hallmarked jewellery with certification and our quality guarantee.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section (Homepage) -->
+    <section class="faq-section-home" id="faq">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-badge">Got Questions?</div>
+                <h2 class="section-title">Frequently Asked</h2>
+                <div class="gold-line"></div>
+                <p class="section-subtitle">Everything you need to know before you shop with us</p>
+            </div>
+            <div class="faq-list" id="home-faq-list">
+                <!-- FAQ items rendered by home.js -->
             </div>
         </div>
     </section>
@@ -324,12 +670,87 @@
 
     <!-- Testimonials Section -->
     <section class="testimonials" id="testimonials">
-        <div class="testimonials-container animate-on-scroll">
-            <div class="testimonial-track" id="testimonial-track">
-                <!-- Testimonials will be dynamically inserted by home.js -->
+        <!-- Decorative background quote -->
+        <div class="testimonials-bg-quote" aria-hidden="true">&ldquo;</div>
+
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-badge">Client Stories</div>
+                <h2 class="section-title">What Our Clients Say</h2>
+                <div class="gold-line"></div>
+                <p class="section-subtitle">Thousands of families trust us with their most cherished moments</p>
             </div>
-            <div class="testimonial-dots" id="testimonial-dots">
-                <!-- Dots will be dynamically inserted by home.js -->
+
+            <div class="testimonials-container animate-on-scroll">
+                <div class="testimonial-track" id="testimonial-track">
+                    <!-- Testimonials will be dynamically inserted by home.js -->
+                </div>
+
+                <div class="testimonial-nav">
+                    <button class="testimonial-nav-btn" id="testimonial-prev" aria-label="Previous testimonial">
+                        <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                    </button>
+                    <div class="testimonial-dots" id="testimonial-dots"></div>
+                    <button class="testimonial-nav-btn" id="testimonial-next" aria-label="Next testimonial">
+                        <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Store Visit Section -->
+    <section class="store-visit-section" id="store-visit">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-badge">Visit Us</div>
+                <h2 class="section-title">Find Our Showroom</h2>
+                <div class="gold-line"></div>
+                <p class="section-subtitle">Step into our world of fine jewellery at Gandhi Road, the heart of Ahmedabad's jewellery district</p>
+            </div>
+            <div class="store-visit-grid animate-on-scroll">
+                <div class="store-visit-info">
+                    <div class="store-info-card">
+                        <div class="store-info-icon">
+                            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div>
+                            <div class="store-info-title">Our Address</div>
+                            <div class="store-info-text">156 — Tamboli Khancho's, Doshi Vadani Pole,<br>Nr. Kika Mehta Pole, Gandhi Road, Ahmedabad</div>
+                        </div>
+                    </div>
+                    <div class="store-info-card">
+                        <div class="store-info-icon">
+                            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 015.19 12.9a19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                        </div>
+                        <div>
+                            <div class="store-info-title">Call Us</div>
+                            <div class="store-info-text"><a href="tel:+919904036646">+91 9904036646</a></div>
+                        </div>
+                    </div>
+                    <div class="store-info-card">
+                        <div class="store-info-icon">
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <div>
+                            <div class="store-info-title">Working Hours</div>
+                            <div class="store-info-text">Mon – Sat: 10:00 AM – 8:00 PM<br>Sunday: By Appointment</div>
+                        </div>
+                    </div>
+                    <a href="https://maps.google.com/?q=Tamboli+Khancho+Gandhi+Road+Ahmedabad" target="_blank" rel="noopener" class="store-directions-btn">
+                        <svg viewBox="0 0 24 24"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                        Get Directions
+                    </a>
+                </div>
+                <div class="store-map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.0754!2d72.5813!3d23.0225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848abad45249%3A0xa70c6dc143ef8e65!2sGandhi+Road%2C+Ahmedabad%2C+Gujarat!5e0!3m2!1sen!2sin!4v1695123456789"
+                        title="Gopal Govind Ornaments Location — Gandhi Road, Ahmedabad"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
             </div>
         </div>
     </section>
@@ -443,6 +864,167 @@
                             Send via WhatsApp
                         </button>
                     </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Style Quiz Section -->
+    <section class="quiz-section" id="style-quiz">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-badge">Personalised For You</div>
+                <h2 class="section-title">Find Your Style</h2>
+                <div class="gold-line"></div>
+                <p class="section-subtitle">Answer 3 quick questions and we'll reveal your perfect jewellery match</p>
+            </div>
+            <div class="quiz-widget animate-on-scroll" id="quiz-widget">
+                <!-- Step 1 -->
+                <div class="quiz-step active" id="quiz-step-1">
+                    <div class="quiz-step-indicator">
+                        <div class="quiz-step-dot active"></div>
+                        <div class="quiz-step-dot"></div>
+                        <div class="quiz-step-dot"></div>
+                    </div>
+                    <span class="quiz-emoji">✨</span>
+                    <div class="quiz-question">What's the occasion?</div>
+                    <div class="quiz-subtext">Tell us what you're celebrating</div>
+                    <div class="quiz-options" id="quiz-options-1">
+                        <button class="quiz-option" data-value="bridal">
+                            <span class="quiz-option-emoji">👰</span>
+                            <span class="quiz-option-label">Bridal</span>
+                            <span class="quiz-option-sub">Wedding &amp; engagement</span>
+                        </button>
+                        <button class="quiz-option" data-value="festival">
+                            <span class="quiz-option-emoji">🪔</span>
+                            <span class="quiz-option-label">Festival</span>
+                            <span class="quiz-option-sub">Diwali, Navratri &amp; more</span>
+                        </button>
+                        <button class="quiz-option" data-value="anniversary">
+                            <span class="quiz-option-emoji">💕</span>
+                            <span class="quiz-option-label">Anniversary</span>
+                            <span class="quiz-option-sub">A special milestone</span>
+                        </button>
+                        <button class="quiz-option" data-value="everyday">
+                            <span class="quiz-option-emoji">☀️</span>
+                            <span class="quiz-option-label">Everyday Wear</span>
+                            <span class="quiz-option-sub">Light &amp; wearable daily</span>
+                        </button>
+                    </div>
+                    <div class="quiz-actions">
+                        <button class="quiz-btn-next" id="quiz-next-1" disabled>
+                            Next Step
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </button>
+                    </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="quiz-step" id="quiz-step-2">
+                    <div class="quiz-step-indicator">
+                        <div class="quiz-step-dot done"></div>
+                        <div class="quiz-step-dot active"></div>
+                        <div class="quiz-step-dot"></div>
+                    </div>
+                    <span class="quiz-emoji">💛</span>
+                    <div class="quiz-question">What's your style?</div>
+                    <div class="quiz-subtext">Choose what resonates most with you</div>
+                    <div class="quiz-options" id="quiz-options-2">
+                        <button class="quiz-option" data-value="traditional">
+                            <span class="quiz-option-emoji">🏛️</span>
+                            <span class="quiz-option-label">Traditional</span>
+                            <span class="quiz-option-sub">Classic Indian designs</span>
+                        </button>
+                        <button class="quiz-option" data-value="contemporary">
+                            <span class="quiz-option-emoji">✦</span>
+                            <span class="quiz-option-label">Contemporary</span>
+                            <span class="quiz-option-sub">Modern &amp; minimal</span>
+                        </button>
+                        <button class="quiz-option" data-value="opulent">
+                            <span class="quiz-option-emoji">👑</span>
+                            <span class="quiz-option-label">Opulent</span>
+                            <span class="quiz-option-sub">Grand &amp; statement</span>
+                        </button>
+                        <button class="quiz-option" data-value="nature">
+                            <span class="quiz-option-emoji">🌿</span>
+                            <span class="quiz-option-label">Nature Inspired</span>
+                            <span class="quiz-option-sub">Floral &amp; organic motifs</span>
+                        </button>
+                    </div>
+                    <div class="quiz-actions">
+                        <button class="quiz-btn-back" id="quiz-back-2">
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                            Back
+                        </button>
+                        <button class="quiz-btn-next" id="quiz-next-2" disabled>
+                            Next Step
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </button>
+                    </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="quiz-step" id="quiz-step-3">
+                    <div class="quiz-step-indicator">
+                        <div class="quiz-step-dot done"></div>
+                        <div class="quiz-step-dot done"></div>
+                        <div class="quiz-step-dot active"></div>
+                    </div>
+                    <span class="quiz-emoji">💎</span>
+                    <div class="quiz-question">Favourite metal &amp; stone?</div>
+                    <div class="quiz-subtext">What draws you in most?</div>
+                    <div class="quiz-options" id="quiz-options-3">
+                        <button class="quiz-option" data-value="gold">
+                            <span class="quiz-option-emoji">🪙</span>
+                            <span class="quiz-option-label">Pure Gold</span>
+                            <span class="quiz-option-sub">22K hallmarked gold</span>
+                        </button>
+                        <button class="quiz-option" data-value="kundan">
+                            <span class="quiz-option-emoji">🔷</span>
+                            <span class="quiz-option-label">Kundan &amp; Polki</span>
+                            <span class="quiz-option-sub">Uncut diamonds &amp; enamel</span>
+                        </button>
+                        <button class="quiz-option" data-value="gemstone">
+                            <span class="quiz-option-emoji">🔴</span>
+                            <span class="quiz-option-label">Gemstones</span>
+                            <span class="quiz-option-sub">Ruby, emerald, sapphire</span>
+                        </button>
+                        <button class="quiz-option" data-value="antique">
+                            <span class="quiz-option-emoji">🏺</span>
+                            <span class="quiz-option-label">Antique Finish</span>
+                            <span class="quiz-option-sub">Oxidized heritage look</span>
+                        </button>
+                    </div>
+                    <div class="quiz-actions">
+                        <button class="quiz-btn-back" id="quiz-back-3">
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                            Back
+                        </button>
+                        <button class="quiz-btn-next" id="quiz-next-3" disabled>
+                            See My Match
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </button>
+                    </div>
+                </div>
+                <!-- Result -->
+                <div class="quiz-step" id="quiz-result">
+                    <div class="quiz-step-indicator">
+                        <div class="quiz-step-dot done"></div>
+                        <div class="quiz-step-dot done"></div>
+                        <div class="quiz-step-dot done"></div>
+                    </div>
+                    <span class="quiz-emoji">🎉</span>
+                    <div class="quiz-result-category" id="quiz-result-category">Your Match: Gold Jewellery</div>
+                    <div class="quiz-question" id="quiz-result-title">You're a Classic Gold Lover!</div>
+                    <div class="quiz-result-desc" id="quiz-result-desc">Based on your answers, our 22K Gold Collection is your perfect match — timeless, pure, and breathtakingly beautiful.</div>
+                    <div class="quiz-result-cta">
+                        <a href="#" class="btn-primary" id="quiz-result-link">
+                            View My Collection
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                        <a href="https://wa.me/917202951855?text=Hello%20Gopal%20Govind%20Ornaments!%20I%20took%20your%20style%20quiz%20and%20would%20love%20to%20see%20jewellery%20recommendations!" target="_blank" rel="noopener" class="btn-secondary">
+                            WhatsApp Us
+                        </a>
+                    </div>
+                    <button class="quiz-restart-btn" id="quiz-restart" style="margin-top: 16px;">Take Quiz Again</button>
                 </div>
             </div>
         </div>
@@ -567,6 +1149,28 @@
             </div>
         </div>
     </footer>
+
+    <!-- Mobile Bottom Navigation Bar -->
+    <nav class="mobile-bottom-nav" id="mobile-bottom-nav" aria-label="Mobile navigation">
+        <div class="mobile-bottom-nav-inner">
+            <a href="index.html" class="mobile-nav-item active">
+                <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                <span>Home</span>
+            </a>
+            <a href="collections.html" class="mobile-nav-item">
+                <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                <span>Browse</span>
+            </a>
+            <a href="contact.html" class="mobile-nav-item">
+                <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>Visit</span>
+            </a>
+            <a href="https://wa.me/919904036646?text=Hello%20Gopal%20Govind%20Ornaments!%20I'm%20interested%20in%20your%20jewellery%20collection." target="_blank" rel="noopener" class="mobile-nav-item mobile-nav-whatsapp">
+                <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                <span>Chat</span>
+            </a>
+        </div>
+    </nav>
 
     <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/919904036646?text=Hello%20Gopal%20Govind%20Ornaments!%20I'm%20interested%20in%20your%20jewellery%20collection."
